@@ -24,7 +24,7 @@ app.use(session({
 
 var quoteApi = restful.model("quote", Quote.schema)
   .methods(["get", "post", "put", "delete"])
-  .register(app, "/api/quote");
+  .register(app, "/api/data");
 
 
 app.get('/api/houses', (req, res) => {

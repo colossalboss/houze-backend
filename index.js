@@ -67,6 +67,14 @@ app.get('/api/isLoggedin', (req, res) => {
   console.log(req.session['email'])
 });
 
+app.get('/api/authenticated', (req, res) => {
+  if (!(!req.session.email)) {
+    res.send(true);
+  } else {
+    res.send(false);
+  }
+});
+
 app.get('/api/logout', (req, res) => {
   console.log('logout requested');
 

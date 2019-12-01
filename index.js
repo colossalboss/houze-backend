@@ -22,15 +22,6 @@ app.use(session({
   resave: false
 }))
 
-var quoteApi = restful.model("quote", Quote.schema)
-  .methods(["get", "post", "put", "delete"])
-  .register(app, "/api/data");
-
-
-app.get('/api/houses', (req, res) => {
-  res.send('hello')
-});
-
 app.get('/api/houses', (req, res) => {
   const houses = [];
 

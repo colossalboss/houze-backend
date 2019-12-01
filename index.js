@@ -23,6 +23,10 @@ app.use(session({
 }))
 
 app.get('/api/houses', (req, res) => {
+  res.send('hello')
+});
+
+app.get('/api/houses', (req, res) => {
   const houses = [];
 
   mongoose.connect('mongodb://localhost:27017/angulardb', (err, db) => {
